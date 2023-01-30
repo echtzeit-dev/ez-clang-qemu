@@ -397,7 +397,7 @@ bool parseHeader(char Buffer[], uint32_t *OpCode, uint32_t *SeqID,
   const char *Data = Buffer;
   Data += readSize(Data, NumArgBytes);
 
-  if (*NumArgBytes <= MessageHeaderSize)
+  if (*NumArgBytes < MessageHeaderSize)
     return error("Received truncated message");
 
   *NumArgBytes -= MessageHeaderSize;
