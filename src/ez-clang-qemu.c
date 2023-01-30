@@ -382,6 +382,9 @@ void sendHangupMessage(bool Success) {
     sendBytes(Buffer, LenBytes);
     sendBytes(ErrorResponsePtr, ErrorLen);
   }
+
+  char EOF = 0x05;
+  sendBytes(&EOF, 1);
 }
 
 //
