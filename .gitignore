@@ -2,6 +2,9 @@
 .vscode
 .DS_Store
 bin
+debug
+release
+lm3s811
 misc
 compile_commands.json
 *.code-workspace
